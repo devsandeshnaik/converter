@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum AreaUnit: String, CaseIterable, Unit {
+enum AreaUnit: String, CaseIterable, Unit, Identifiable {
+    
     case squareMillimeter
     case squareCentimeter
     case squareMeter
@@ -57,5 +58,7 @@ enum AreaUnit: String, CaseIterable, Unit {
         case .acre: return "ac"
         case .squareMile: return "mi²"
         }
-    } 
+    }
+    
+    var id: String { rawValue }
 }

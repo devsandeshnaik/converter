@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SpeedUnit: String, CaseIterable, Unit {
+enum SpeedUnit: String, CaseIterable, Unit, Identifiable {
     case metersPerSecond
     case kilometersPerHour
     case milesPerHour
@@ -38,4 +38,6 @@ enum SpeedUnit: String, CaseIterable, Unit {
         case .feetPerSecond: return "ft/s"
         }
     }
+    
+    var id: String { rawValue }
 }

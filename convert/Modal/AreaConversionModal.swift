@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class AreaConversionModal: UnitConversionProtocol {
+final class AreaConversionModal: UnitConversionProtocol {    
     
-    typealias Unit = AreaUnit
+    typealias UnitType = AreaUnit
     
     func convert(_ value: Double, from: AreaUnit, to: AreaUnit) -> Double {
         guard from != to else { return value }

@@ -9,7 +9,7 @@ import Foundation
 
 final class WeightConversionModal: UnitConversionProtocol {
     
-    typealias Unit = WeightUnit
+    typealias UnitType = WeightUnit
     
     // Foundation's imperial mass units use rounded coefficients (e.g. 1 lb = 0.453592 kg),
     // so define them with the exact international definitions in kilograms.

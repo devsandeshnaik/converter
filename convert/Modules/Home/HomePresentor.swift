@@ -7,17 +7,21 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 @Observable
 class HomePresentor {
-    private var interactor: HomeInteractor
+    private let interactor: HomeInteractor
+    private let router: HomeRouter
     
     var measurements: [Measures] = []
     
     private var cancellable: Set<AnyCancellable> = []
     
-    init(interactor: HomeInteractor) {
+    init(interactor: HomeInteractor,
+         router: HomeRouter) {
         self.interactor = interactor
+        self.router = router
         
         interactor.model.$measurements
             .assign(to: \.measurements, on: self)
@@ -28,4 +32,7 @@ class HomePresentor {
         interactor.loadMeasures()
     }
     
+    func converterView(for measure: Measures) -> some View {
+        router.makeConverterView(for: measure)
+    }
 }

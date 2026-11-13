@@ -9,7 +9,7 @@ import Foundation
 
 final class DigitalStorageConversionModal: UnitConversionProtocol {
     
-    typealias Unit = DigitalStorageUnit
+    typealias UnitType = DigitalStorageUnit
     
     func convert(_ value: Double, from: DigitalStorageUnit, to: DigitalStorageUnit) -> Double {
         guard from != to else { return value }

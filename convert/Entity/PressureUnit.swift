@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PressureUnit: String, CaseIterable, Unit {
+enum PressureUnit: String, CaseIterable, Unit, Identifiable {
     case pascal
     case kilopascal
     case bar
@@ -50,4 +50,6 @@ enum PressureUnit: String, CaseIterable, Unit {
         case .mmHg: return "mmHg"
         }
     }
+    
+    var id: String { rawValue }
 }

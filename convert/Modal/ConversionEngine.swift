@@ -17,7 +17,7 @@ final class ConversionEngine<T: UnitConversionProtocol> {
         self.conversionModal = conversionModal
     }
 
-    func convert(value: Double, from: T.Unit, to: T.Unit) {
+    func convert(value: Double, from: T.UnitType, to: T.UnitType) {
         output = conversionModal.convert(value, from: from, to: to)
     }
     

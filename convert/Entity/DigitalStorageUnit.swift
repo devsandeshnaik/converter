@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DigitalStorageUnit: String, CaseIterable, Unit {
+enum DigitalStorageUnit: String, CaseIterable, Unit, Identifiable {
     case bit
     case byte
     case kilobyte
@@ -46,4 +46,6 @@ enum DigitalStorageUnit: String, CaseIterable, Unit {
         case .petabyte: return "PB"
         }
     }
+    
+    var id: String { rawValue }
 }

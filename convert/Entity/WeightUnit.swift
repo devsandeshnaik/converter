@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum WeightUnit: String, CaseIterable, Unit {
+enum WeightUnit: String, CaseIterable, Unit, Identifiable {
     case milligram
     case gram
     case kilogram
@@ -50,4 +50,6 @@ enum WeightUnit: String, CaseIterable, Unit {
         case .ton: return "ton"
         }
     }
+    
+    var id: String { rawValue }
 }

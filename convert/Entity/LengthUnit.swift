@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LengthUnit: String, CaseIterable, Unit {
+enum LengthUnit: String, CaseIterable, Unit, Identifiable {
     case millimeter
     case centimeter
     case meter
@@ -50,4 +50,7 @@ enum LengthUnit: String, CaseIterable, Unit {
         case .mile: return "mi"
         }
     }
+    
+    var id: String { rawValue }
+    
 }

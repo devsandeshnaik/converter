@@ -5,7 +5,7 @@
 //  Created by Sandesh Naik on 12/11/26.
 //
 
-enum TemperatureUnit: String, CaseIterable, Unit {
+enum TemperatureUnit: String, CaseIterable, Unit, Identifiable {
     case celsius
     case fahrenheit
     case kelvin
@@ -28,4 +28,6 @@ enum TemperatureUnit: String, CaseIterable, Unit {
         case .kelvin: return "K"
         }
     }
+    
+    var id: String { rawValue }
 }

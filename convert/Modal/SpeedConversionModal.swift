@@ -9,7 +9,7 @@ import Foundation
 
 final class SpeedConversionModal: UnitConversionProtocol {
     
-    typealias Unit = SpeedUnit
+    typealias UnitType = SpeedUnit
     
     /// Foundation has no feet-per-second unit, so define one relative to the base unit (m/s).
     private static let feetPerSecond = UnitSpeed(symbol: "ft/s", converter: UnitConverterLinear(coefficient: 0.3048))

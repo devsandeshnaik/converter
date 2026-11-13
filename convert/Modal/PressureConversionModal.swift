@@ -9,7 +9,7 @@ import Foundation
 
 final class PressureConversionModal: UnitConversionProtocol {
     
-    typealias Unit = PressureUnit
+    typealias UnitType = PressureUnit
     
     // Foundation has no atmosphere or torr units, so define them relative to the base unit (pascals).
     private static let atmospheres = UnitPressure(symbol: "atm", converter: UnitConverterLinear(coefficient: 101_325))

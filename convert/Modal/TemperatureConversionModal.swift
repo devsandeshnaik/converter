@@ -8,7 +8,7 @@ import Foundation
 
 final class TemperatureConversionModal: UnitConversionProtocol {
     
-    typealias Unit = TemperatureUnit
+    typealias UnitType = TemperatureUnit
     
     func convert(_ value: Double, from: TemperatureUnit, to: TemperatureUnit) -> Double{
         return convertUnit(value, from: foundationUnit(for: from), to: foundationUnit(for: to))

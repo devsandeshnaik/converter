@@ -9,7 +9,7 @@ import Foundation
 
 final class DurationConversionModal: UnitConversionProtocol {
     
-    typealias Unit = DurationUnit
+    typealias UnitType = DurationUnit
     
     // Foundation's UnitDuration stops at hours, so larger units are defined relative to the base unit (seconds).
     // Month and year use the average Gregorian year of 365.2425 days.

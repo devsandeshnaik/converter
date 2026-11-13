@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DurationUnit: String, CaseIterable, Unit {
+enum DurationUnit: String, CaseIterable, Unit, Identifiable {
     case nanosecond
     case microsecond
     case millisecond
@@ -58,4 +58,6 @@ enum DurationUnit: String, CaseIterable, Unit {
         case .year: return "yr"
         }
     }
+    
+    var id: String { rawValue }
 }

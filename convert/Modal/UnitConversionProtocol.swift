@@ -8,9 +8,13 @@
 import Foundation
 
 protocol UnitConversionProtocol {
-    associatedtype Unit
-    func convert(_ value: Double,from: Unit, to: Unit) -> Double
+    associatedtype UnitType: Unit & CaseIterable & Hashable & Identifiable
+    var units: [UnitType] { get }
+    func convert(_ value: Double,from: UnitType, to: UnitType) -> Double
 }
 
+extension UnitConversionProtocol {
+    var units: [UnitType] { Array(UnitType.allCases) }
+}
 
 

@@ -9,7 +9,7 @@ import Foundation
 
 final class LengthConversionModal: UnitConversionProtocol {
     
-    typealias Unit = LengthUnit
+    typealias UnitType = LengthUnit
     
     func convert(_ value: Double, from: LengthUnit, to: LengthUnit) -> Double {
         guard from != to else { return value }
